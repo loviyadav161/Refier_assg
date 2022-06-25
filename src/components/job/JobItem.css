@@ -1,0 +1,57 @@
+.job {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    overflow: auto;
+}
+.card_body{
+    margin: 10px 0px;
+    padding: 10px;
+    width: 100%;
+}
+.card_header{
+    display: flex;
+    width: 100%;
+}
+.company_logo{
+    padding: 10px;
+    margin-left: 130px;
+}
+.card_lower{
+    display: flex;
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
+.btn_lower{
+    background-color: rgb(47, 168, 168);
+    color: white;
+    margin-left: 80px;
+    width: 70px;
+    border: none;
+    border-radius: 4px;
+}
+.btn_lower:hover{
+    background-color: rgb(47, 168, 168);
+    color: rgb(9, 188, 188);
+}
+.p_tag{
+    background-color: #ccc;
+    border-radius: 20px;
+    margin: 10px 10px;
+    text-align: center;
+    padding: 10px;
+}
+@media (max-width:415px) {
+    .btn_lower{
+        margin-left: 40px;
+    }
+    .company_logo{
+        margin-left: 60px;
+    }
+    .job{
+        margin: none;
+        padding: none;
+    }
+}

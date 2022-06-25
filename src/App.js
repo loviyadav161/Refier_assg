@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-
+import {useState} from 'react';
+import NavBar from './components/NavBar.js';
+import LoginDetails from './components/login/LoginDetails';
+import Jobs from "./components/job/Jobs";
+import Filter from "./components/Filter";
+import Footer from "./components/Footer";
 function App() {
+  const [loginShow, setLoginShow] = useState (false);
+  const [login, setLogin] = useState(false);
+  const showLoginHandler = () => {
+    setLoginShow(true);
+  };
+
+  const hideLoginHandler = () => {
+    setLoginShow(false);
+  };
+  const alertHandler=()=>{
+    setLogin(true);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar onLogin = {showLoginHandler}/>
+      {login && window.alert('Successfully Logged In')}
+      {loginShow && <LoginDetails onClose = {hideLoginHandler} onLogIn={alertHandler}/>}
+      <div className="middle">
+        <Filter/>
+        <Jobs/>
+      </div>
+      <Footer/>
+    </>
   );
 }
 
