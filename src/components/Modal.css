@@ -12,8 +12,8 @@
     display: block;
     position: fixed;
     top: 20px;
-    left: 50px;
-    width: 45%;
+    left: 10px;
+    width: 100%;
     background-color: white;
     padding: 1rem;
     border-radius: 14px;
@@ -23,7 +23,7 @@
   
   @media (min-width: 448px) {
     .modal {
-      width: 35%;
+      width: 30%;
       left: calc(50% - 10rem);
       height: 90%;
     }

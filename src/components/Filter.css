@@ -1,10 +1,9 @@
 .fliter_main{
     background-color: white;
     height: 80%;
-    margin: 20px 70px;
+    margin: 20px 0px 20px 70px;
     padding: 10px;
     border-radius: 4px;
-    border-radius: 3px;
     width: fit-content;
     display: block;
 }
